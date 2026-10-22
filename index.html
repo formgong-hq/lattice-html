@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halden Studio — creative development in Lisbon</title>
+<meta name="description" content="Halden Studio designs and builds calm, motion-led websites for studios and small companies.">
+<link rel="icon" href="data:,">
+<script>// Layout mode before first paint: L = pinned screens on a fixed grid, F = flowing page on a scrolling grid.
+  // "lines" hides boxes until they scroll into view, then slides them in and draws their frames.
+  // The intro plays once per tab session and never for reduced motion.
+  (function () {
+    var root = document.documentElement;
+    root.classList.add("js", innerWidth > 860 ? "L" : "F");
+    try {
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches && !sessionStorage.getItem("lattice-intro")) root.classList.add("js-intro");
+    } catch (e) {}
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) root.classList.add("lines");
+  })();</script>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#contact">Skip to the contact form</a>
+<div class="intro" aria-hidden="true">
+  <div class="frame" data-k="i-frame"><i></i><i></i><i></i><i></i></div>
+  <div class="intro-word" data-k="i-word"><span style="--i:0">H</span><span style="--i:1">A</span><span style="--i:2">L</span><span style="--i:3">D</span><span style="--i:4">E</span><span style="--i:5">N</span></div>
+</div>
+<canvas class="orb" aria-hidden="true"></canvas>
+<header class="bar">
+  <a class="b logo" href="#top" aria-label="Halden Studio, back to top"><span>HAL</span>DEN</a>
+  <button class="b menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">M</button>
+  <div class="b clock"><span class="mono">LIS</span><span data-clock data-tz="Europe/Lisbon">--:--</span></div>
+</header>
+<nav id="menu" class="menu" aria-label="Main">
+  <a href="#work" style="--i:0"><b>01</b>Work</a>
+  <a href="#services" style="--i:1"><b>02</b>Services</a>
+  <a href="#about" style="--i:2"><b>03</b>About</a>
+  <a href="#contact" style="--i:3"><b>04</b>Contact</a>
+</nav>
+<main id="top">
+<section class="sec hero" aria-label="Introduction">
+    <div class="screen">
+      <div class="frame" data-k="frame" data-orb="sphere" data-orb-color="white" data-orb-scale=".28">
+        <i></i><i></i><i></i><i></i>
+        <span class="mono readout" data-readout aria-hidden="true"></span>
+      </div>
+      <p class="label h-lab" data-k="tl"><b>01.</b>Creative developer</p>
+      <p class="label h-lab r" data-k="tr"><b>02.</b>Based in Lisbon</p>
+      <p class="label h-lab" data-k="bl"><b>03.</b><span>T: <a href="tel:+351912345678">+351 912 345 678</a><br>M: <a href="mailto:hello@example.com">hello@example.com</a></span></p>
+      <p class="label h-lab r" data-k="br"><b>04.</b>Booking projects for 2027</p>
+      <h1 class="hw" data-k="wl"><span>Design</span><span>that moves</span></h1>
+      <p class="hw r" data-k="wr"><span>Code</span><span>that lasts</span></p>
+    </div>
+  </section>
+<section class="sec work" id="work" aria-labelledby="work-h">
+    <div class="screen">
+      <div class="head" data-k="w-head" data-snap>
+        <p class="sub" data-reveal>Selected websites, from first sketch to launch.</p>
+        <h2 id="work-h" data-reveal style="--d:.08s"><span>Selected</span> <span>work</span></h2>
+      </div>
+      <a class="b btn cta" href="#contact" data-k="w-cta" data-rows="1">Start a project</a>
+      <div class="b p-orb" data-k="p-orb" data-rows="4" data-orb="blob" data-orb-color="teal" data-orb-scale=".34"><span class="mono" data-p-meta aria-hidden="true"></span></div>
+      <div class="b p-shot" data-k="p-shot" data-rows="4" aria-hidden="true">
+        <div class="b mock" data-mock><div class="mock-dots"><i></i><i></i><i></i></div></div>
+        <div class="b phone" data-phone></div>
+      </div>
+      <div class="p-thumbs" data-k="p-thumbs" data-rows="1" data-p-thumbs></div>
+      <div class="b p-text" data-k="p-text" data-rows="5">
+        <div class="p-in" data-p-text>
+          <p class="label"><b data-p-num>01 / 06</b><span data-p-kind>2026 · E-commerce · Astro</span></p>
+          <p data-p-t1>A web shop for a small seaweed skincare brand, built around ingredients and slow storytelling.</p>
+          <p data-p-t2>Product pages load in under a second, and wholesale requests reach the right person.</p>
+        </div>
+      </div>
+      <div class="pbar">
+        <button class="b btn" type="button" data-k="b-prev" data-p-prev aria-label="Previous project">←</button>
+        <a class="b btn" href="#contact" data-k="b-link" aria-label="Ask about a project like this">↗</a>
+        <p class="b pb-name" data-k="b-name" aria-live="polite"><span data-p-name>kelp &amp; co.</span></p>
+        <button class="b btn" type="button" data-k="b-next" data-p-next aria-label="Next project">→</button>
+      </div>
+    </div>
+  </section>
+<section class="sec services" id="services" aria-labelledby="svc-h">
+    <div class="screen">
+      <div class="head" data-k="s-head" data-snap>
+        <p class="sub" data-reveal>Strategy, design and code from one desk.</p>
+        <h2 id="svc-h" data-reveal style="--d:.08s"><span>Plan</span> <span>design</span> <span>ship</span></h2>
+      </div>
+      <a class="b btn cta" href="#contact" data-k="s-cta" data-rows="1">Get in touch</a>
+      <div class="b rot" data-k="rot" data-rows="5" data-rot>
+        <div class="rot-sq" data-rot-squares></div>
+        <p class="rot-w"><span class="rot-w1" data-rot-a>motion</span><span class="rot-w2" data-rot-b>design</span></p>
+        <p class="rot-desc" data-rot-d>Transitions and small interactions that guide the eye and give a site its rhythm.</p>
+      </div>
+      <div class="b s-orb" data-k="s-orb" data-rows="4" data-orb="sphere" data-orb-color="amber" data-orb-scale=".34"><span class="mono" aria-hidden="true">orbit · 0.4 rad/s</span></div>
+      <div class="stats">
+        <div class="b st st-txt" data-k="st">building<br>and designing<span class="label">since 2017</span></div>
+        <div class="b st" data-k="st"><p class="num"><span data-count="40">40</span>+</p><p class="label">Projects shipped</p></div>
+        <div class="b st" data-k="st"><p class="num"><span data-count="9">9</span></p><p class="label">Years in practice</p></div>
+        <div class="b st" data-k="st"><p class="num"><span data-count="98">98</span>%</p><p class="label">Clients who come back</p></div>
+      </div>
+      <div class="quotes" data-k="quotes" data-rows="3" data-slide aria-label="What clients say">
+        <div class="track">
+          <figure class="q"><blockquote>Iris asked better questions about our customers than we did. The shop finally sounds like us, and wholesale requests arrive sorted.</blockquote><figcaption>Sofia Marques <span>· Founder, Kelp &amp; Co.</span></figcaption></figure>
+          <figure class="q"><blockquote>Clear plan, no surprises, and every change was explained before it happened. The booking flow is half as long as before.</blockquote><figcaption>Daniel Price <span>· CTO, Atlas Rail</span></figcaption></figure>
+          <figure class="q"><blockquote>Our older patients book online now. That alone was worth it, and the site looks calm instead of clinical.</blockquote><figcaption>Hannah Weiss <span>· Practice manager, Mosaic Clinic</span></figcaption></figure>
+          <figure class="q"><blockquote>She let the photographs do the talking and made the motion feel like turning pages. Clients mention it in first meetings.</blockquote><figcaption>Tom Becker <span>· Partner, Ondra Architects</span></figcaption></figure>
+          <figure class="q"><blockquote>Fast, honest and calm under deadline pressure. Volunteer sign-ups never dropped a single message.</blockquote><figcaption>Leah Moreau <span>· Producer, Lumen Festival</span></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="sec about" id="about" aria-labelledby="about-h">
+    <div class="screen">
+      <div class="head" data-k="a-head" data-snap>
+        <p class="sub" data-reveal>A studio of one, with a few clients at a time.</p>
+        <h2 id="about-h" data-reveal style="--d:.08s"><span>About</span> <span>the studio</span></h2>
+      </div>
+      <p class="b a-text" data-k="a-text" data-snap data-words>I design and build websites for studios and small companies: calm layouts, motion with a reason, and a contact form that never loses a message.</p>
+      <div class="b a-orb" data-k="a-orb" data-rows="4" data-orb="blob" data-orb-color="white" data-orb-scale=".3"></div>
+      <ul class="tools" aria-label="Tools">
+        <li class="b" data-k="tool">Astro</li><li class="b" data-k="tool">Nuxt</li><li class="b" data-k="tool">Next.js</li><li class="b" data-k="tool">WordPress</li><li class="b" data-k="tool">GSAP</li><li class="b" data-k="tool">Figma</li>
+      </ul>
+    </div>
+  </section>
+<section class="sec contact" id="contact" aria-labelledby="contact-h">
+    <div class="screen">
+      <div class="head" data-k="c-head" data-snap>
+        <p class="sub" data-reveal>Tell me about the project. I reply within two working days.</p>
+        <h2 id="contact-h" data-reveal style="--d:.08s"><span>Start a</span> <span>project</span></h2>
+      </div>
+      <div class="c-info">
+        <ul class="b box" data-k="box1" data-snap>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li><a href="tel:+351912345678">+351 912 345 678</a></li>
+          <li><a href="https://t.me/example" rel="noopener">Telegram</a></li>
+        </ul>
+        <div class="b box" data-k="box2" data-snap>
+          <p>Lisbon, Portugal</p>
+          <p>Mon–Fri, 9:00–18:00</p>
+          <p class="mono">Remote work across Europe</p>
+        </div>
+      </div>
+      <div class="b c-orb" data-k="c-orb" data-rows="4" data-orb="dust" data-orb-color="white" data-orb-scale=".3"></div>
+
+      
+      <form id="fg-form" class="c-form" data-k="form" action="https://formgong.com/submit" method="POST" enctype="multipart/form-data" data-sitekey>
+        <input type="hidden" name="access_key" value="fk_your_access_key">
+        <input type="hidden" name="_lang" value="en">
+        <div aria-hidden="true" style="position:absolute;inset-inline-start:0;top:0;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"><label>Leave this field empty<input name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+        <div class="b f"><label for="f-name">01 / Name</label><input id="f-name" name="name" type="text" required maxlength="80" autocomplete="name" placeholder="Your name"></div>
+        <div class="b f"><label for="f-email">02 / Email</label><input id="f-email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="you@company.com"></div>
+        <div class="b f" data-phone-field><label for="f-phone">03 / Phone (optional)</label><input id="f-phone" name="phone" type="tel" maxlength="40" autocomplete="tel" placeholder="+351 …"></div>
+        <div class="b f msg"><label for="f-message">04 / Project</label><textarea id="f-message" name="message" required maxlength="3000" placeholder="What are you building, and by when?"></textarea></div>
+        
+        <div class="b" data-turnstile hidden></div>
+        <button class="b btn send" type="submit"><span data-send-label>Discuss a project</span><span class="arrow" aria-hidden="true">→</span></button>
+        <p class="status" data-status role="status"></p>
+        <div class="b sent" tabindex="-1">
+          <p class="label"><b>✓</b>Message received</p>
+          <p>Thanks, <span data-sent-name="">there</span>. Your message is in my inbox. I reply within two working days.</p>
+          <button type="button" class="b btn again" data-again>Send another message</button>
+        </div>
+      </form>
+
+      <div class="foot">
+        <p class="b" data-k="f-copy"><span>© <span data-year="">2026</span> Halden Studio</span></p>
+        <a class="b" href="#" data-k="f-priv">Privacy policy</a>
+        <a class="b" href="#" data-k="f-terms">Terms</a>
+        <a class="b" href="https://formgong.com" rel="noopener" data-k="f-credit">Powered by Formgong</a>
+      </div>
+    </div>
+  </section>
+</main>
+<div class="prog" aria-hidden="true"><i></i></div>
+<script>window.FG_IMG="img/";</script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
